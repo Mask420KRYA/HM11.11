@@ -15,7 +15,7 @@ function userExists($username) {
             while (!feof($fileUsers)) {
                 $lineString = fgets($fileUsers);
                 $line = explode(";",$lineString);
-            if ($line[0] == $username) {
+            if ($line[0] === $username) {
                 fclose($fileUsers);
                 return true;
             }
